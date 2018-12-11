@@ -1,0 +1,15 @@
+.title
+  %h4 Upload pipo's file
+= form_tag(upload_pipos_path, multipart: true) do
+  .row
+    .col.s6
+      .file-field.input-field
+        .btn.blue
+          %span File
+          = file_field_tag 'file'
+          / %input{type: 'file', name: 'pipos_file'}/
+        .file-path-wrapper
+          %input.file-path.validate{type: 'text'}/
+  .row
+    .col.s6
+      = submit_tag 'Upload', class: 'btn blue right'
