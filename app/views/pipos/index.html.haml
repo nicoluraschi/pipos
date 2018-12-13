@@ -1,0 +1,13 @@
+.row.with-margin
+  .col.s6.offset-s3
+    .title
+      %h4.center Listing pipos
+
+- @pipos.each do |key, value|
+  .row
+    .col.s6.offset-s3
+      .center.list-pipos
+        - if value == 1
+          =  "#{value} ocurrencia de la palabra #{key}"
+        - else
+          = "#{value} ocurrencias de la palabra #{key}"
